@@ -1,0 +1,14 @@
+.items {
+    padding: 10px 0;
+    width: 300px;
+}
+.items:nth-child(odd) {
+    background: #ddd;
+}
+.items:nth-child(even) {
+    background: #eee;
+}
+
+.add, .complete {
+    margin: 0 0 10px;
+}

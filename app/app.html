@@ -1,0 +1,15 @@
+<h1>My First Angular 2 App Yeah bla</h1>
+<div class="add">
+    <input #todotext (keyup)="doneTyping($event)" />
+    <button (click)="addTodo(todotext)">Add todo</button>
+</div>
+
+<div class="complete">
+<button *ngIf="todos.length > 1" (click)="completeAll()">Complete all</button>
+</div>
+
+<div class="items" *ngFor="#todo of todos">
+    <input type="checkbox" #chkbox [checked]="todo.completed" (click)="setCompleted(todo, chkbox.value)" />
+    {{todo.text}}
+    <button (click)="removeTodo(todo)">Delete</button>
+</div>
